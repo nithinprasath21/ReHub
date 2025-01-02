@@ -1,6 +1,13 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm install express mongoose cors bcrypt jsonwebtoken multer
+
+express@^4.17.1
+mongoose@^5.13.8
+cors@^2.8.5
+bcrypt@^5.0.1
+jsonwebtoken@^8.5.1
+multer@^1.4.3
 
 ## Available Scripts
 
