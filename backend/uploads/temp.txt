@@ -1,0 +1,7 @@
+for the front end of the website I need reactjs code with the following features with mongodb linked
+features:
+in the homepage I need heading with "Re" with title and below 5 div boxes with each displaying different domains and below all that I need a "Apply Button" where on clicking I need to redirect to Project details page where it displays a form with following input fields
+Project name - text box, Project description - text box,PPT - upload button to upload files from local PC, Name of Student - text box, College Mail Id - text box and a submit button to submit the details.
+on clicking submit button I need to display the "Thanks for submitting. You will be informed soon" page.
+And also at the same time create a admin dashboard named admin page where all the submitted form are displayed. with all these details and another field as Assign Mentor drop down list to select and button Approve button.
+once clicked approve button in MongoDB create new collection where collected details are stored
