@@ -1,20 +1,19 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Apply from './components/Apply';
-import Admin from './components/Admin';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Auth from './components/Auth'; // Import the Auth component
+import AdminDashboard from './components/AdminDashboard';
+import ResearcherUI from './components/ResearcherUI'; // Import Researcher UI component
+import MentorUI from './components/MentorUI'; // Import Mentor UI component
 
 function App() {
     return (
         <Router>
-            <div className="app-container">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/apply" element={<Apply />} />
-                    <Route path="/admin" element={<Admin />} /> {/* Directly render Admin */}
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<Auth />} /> {/* Use Auth for both login and signup */}
+                <Route path="/admin" element={<AdminDashboard />} />
+                <Route path="/researcher" element={<ResearcherUI />} />
+                <Route path="/mentor" element={<MentorUI />} />
+            </Routes>
         </Router>
     );
 }

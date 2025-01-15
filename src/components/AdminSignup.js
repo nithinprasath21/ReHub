@@ -1,24 +1,26 @@
-// src/components/SignUp.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function SignUp() {
+function AdminSignup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/auth/signup', { email, password });
-            alert("Sign-up successful! You can now sign in.");
+            const response = await axios.post('http://localhost:5000/api/auth/signup', { email, password });
+            alert(response.data.message); // Show success message
+            setEmail('');
+            setPassword('');
         } catch (error) {
-            alert("Error signing up!");
+            alert("Signup failed! " + (error.response?.data.message || "Please try again."));
+            console.error("Signup error:", error.response ? error.response.data : error.message);
         }
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Sign Up</h2>
+            <h2>Admin Signup</h2>
             <input 
                 type="email" 
                 placeholder="Email" 
@@ -33,9 +35,9 @@ function SignUp() {
                 onChange={(e) => setPassword(e.target.value)} 
                 required 
             />
-            <button type="submit">Sign Up</button>
+            <button type="submit">Create Admin</button>
         </form>
     );
 }
 
-export default SignUp;
+export default AdminSignup;
