@@ -4,9 +4,9 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken'); // Ensure you have jsonwebtoken installed
 const router = express.Router();
 
-// Signup route for admin
+// Create New User Route (handles researchers, mentors, and admins)
 router.post('/signup', async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, role } = req.body; // Include role in request body
 
     try {
         const existingUser = await User.findOne({ email });
@@ -15,13 +15,13 @@ router.post('/signup', async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ email, password: hashedPassword, role: 'admin' }); // Set role to admin
+        const newUser = new User({ email, password: hashedPassword, role }); // Set role based on request
         await newUser.save();
 
-        res.status(201).json({ message: "Admin created successfully" });
+        res.status(201).json({ message: "User created successfully" });
     } catch (error) {
-        console.error("Error creating admin:", error);
-        res.status(500).json({ message: "Error creating admin" });
+        console.error("Error creating user:", error);
+        res.status(500).json({ message: "Error creating user" });
     }
 });
 
