@@ -1,0 +1,86 @@
+/* src/styles/Navbar.css */
+
+.header {
+    background-color: lightgray; /* Light grey background */
+    padding: 10px 20px; /* Padding around the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    width: 100%; /* Ensure the navbar takes full width */
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left edge of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px; /* Adjust logo size */
+    margin-right: 10px; /* Space between logo and site name */
+}
+h1{
+    font: bolder;
+    color: black;
+}
+.sitename {
+    font-size: 24px; /* Adjust font size for site name */
+}
+
+.navmenu {
+    display: flex;
+    padding-right: 5%;
+}
+
+.navmenu ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align items in a row */
+}
+
+.navmenu li {
+    margin-left: 30px; /* Spacing between menu items */
+}
+
+.navmenu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text for links */
+    position: relative; /* For underline effect */
+}
+
+.navmenu a:hover::after,
+.navmenu a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position of underline below text */
+    height: 2px; /* Thickness of underline */
+    width: 100%; /* Full width of the link */
+    background-color: blue; /* Color of underline on hover/active */
+}
+
+/* Responsive styles (optional) */
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column; /* Stack items vertically on mobile */
+        display: none; /* Hide by default on mobile view */
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show mobile toggle button */
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle.active + ul {
+        display: flex; /* Show menu when toggle is active */
+    }
+}

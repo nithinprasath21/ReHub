@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/AddProject.css'; // Import the styles
-import logo from "../assets/re-img.png";
+import logo from "../assets/re.jpg";
 
 function AddProject() {
     const [hasTeam, setHasTeam] = useState('yes'); // State to manage team presence
@@ -80,8 +80,8 @@ function AddProject() {
     ];
 
     return (
-        <div className="container">
-            <div className="header">
+        <div className="container1">
+            <div className="header-project">
                 <img src={logo} alt="Logo" className="logo" />
                 <h1>Ré - Project Intake</h1>
             </div>

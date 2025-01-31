@@ -2,16 +2,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  margin-left: 10px;
-  color: white; /* Change header color to white for visibility */
+.main-content {
+  padding-top: 70px; /* Adjust this value based on your navbar height (e.g., if your navbar is around 60px high) */
 }
-
-button {
-  margin-top: 20px;
-  padding: 10px 15px;
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white;
-  border-radius: 5px;
-  border: none;
+button{
+  padding: 15px 20px;
+  font-size: medium;
 }

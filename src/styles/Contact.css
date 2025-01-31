@@ -1,0 +1,90 @@
+.contact-section {
+    padding: 60px 20px; /* Padding around the section */
+    background-color: rgb(230, 230, 230); /* Light background for contact section */
+    width: 80%;
+    margin: 60px auto 0; /* Add top margin to create space above the section */
+}
+
+.contact-title {
+    text-align: center; /* Center align title */
+    margin-bottom: 40px; /* Space below title */
+    font-size: 36px; /* Font size for heading */
+}
+
+.contact-wrapper {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items at the start of the column */
+    width: 85%;
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.contact-info {
+    flex-basis: 30%; /* Left column takes up about 30% of width */
+    padding-right: 20px; /* Space between columns */
+}
+
+.contact-form {
+    flex-basis: 70%; /* Right column takes up about 70% of width */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.form-group {
+    display: flex; /* Use flexbox for input row */
+    justify-content: space-between; /* Space between inputs */
+}
+
+.form-input {
+    width: 100%; /* Set width for inputs to 100% */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 20px; /* Space below inputs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+}
+
+.form-textarea {
+    width: 100%; /* Full width for textarea */
+    padding: 10px; /* Padding inside textarea */
+    margin-bottom: 20px; /* Space below textarea */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+}
+
+/* Submit Button Styles */
+.submit-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners for button */
+    border: none; /* No border on button */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media (max-width: 640px) {
+   .contact-wrapper {
+       flex-direction: column; /* Stack columns on small screens */
+       align-items: center; /* Center align items in contact wrapper */
+   }
+
+   .contact-info, .contact-form {
+       width: 100%; /* Full width on smaller screens */
+       padding-right: 0;
+   }
+
+   .form-group {
+       flex-direction: column; /* Stack inputs vertically on small screens */
+   }
+
+   .form-input,
+   .form-textarea {
+       width: calc(100% - 30px); 
+   }
+}
