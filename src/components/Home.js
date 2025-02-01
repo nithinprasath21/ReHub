@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/Home.css';
 import heroimg from "../assets/re-hero.jpg";
 import projectImage from "../assets/re2.webp"; // Import the right column image
+import Timeline from './Timeline';
 
 function Home() {
     return (
@@ -44,6 +45,27 @@ function Home() {
                 </div>
             </section>
 
+            <section className="statistics-section">
+                <div className="container statistics-container">
+                    <div className="statistic-item">
+                        <h3>847</h3>
+                        <p>Supported Startups</p>
+                    </div>
+                    <div className="statistic-item">
+                        <h3>60+</h3>
+                        <p>Patents Filed</p>
+                    </div>
+                    <div className="statistic-item">
+                        <h3>1483</h3>
+                        <p>Employment Generated</p>
+                    </div>
+                    <div className="statistic-item">
+                        <h3>1431</h3>
+                        <p>Events Conducted</p>
+                    </div>
+                </div>
+            </section>
+
             {/* New Section: Why Choose the Project Intake Program? */}
             <section className="why-choose-section">
                 <h2>Why Choose the Project Intake Program?</h2>
@@ -72,6 +94,55 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <section className="who-can-apply-section">
+                <h2 className="who-can-apply-title">Who Can Apply</h2>
+                <h3 className="who-can-apply-subtitle">Eligibility criteria for applicants:</h3>
+                <ul className="who-can-apply-list">
+                    <li>Technovative and/or appeal to a mass market</li>
+                    <li>Implementable</li>
+                    <li>Commercially viable</li>
+                    <li>Entirely new, better alternative and/or affordable</li>
+                    <li>Committed individual/team</li>
+                </ul>
+            </section>
+            <section id="theme" className="themes-section">
+            <div className="container" data-aos="fade-up" data-aos-delay="100">
+                <h2 className="themes-title">THEMES</h2>
+                <p className="themes-description">We welcome your proposals under the following themes:</p>
+                <div className="cards-container">
+                    {/* Card 1 */}
+                    <div className="theme-card">
+                        <h3>Food and Agriculture</h3>
+                        <p>Innovative solutions for farming, food production, and resource management.</p>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="theme-card">
+                        <h3>Bioenergy</h3>
+                        <p>Harnessing biological resources to produce renewable energy for a sustainable future.</p>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="theme-card">
+                        <h3>Sustainable Materials</h3>
+                        <p>Eco-friendly packaging and construction solutions to reduce environmental impact.</p>
+                    </div>
+
+                    {/* Card 4 */}
+                    <div className="theme-card">
+                        <h3>Water Engineering</h3>
+                        <p>Advanced systems for water purification, recycling, and efficient usage.</p>
+                    </div>
+
+                    {/* Card 5 */}
+                    <div className="theme-card">
+                        <h3>Microgrids</h3>
+                        <p>Localized renewable energy systems for efficient and sustainable power generation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <Timeline />
         </>
     );
 }

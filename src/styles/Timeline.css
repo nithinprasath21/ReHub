@@ -1,0 +1,64 @@
+/* src/styles/Timeline.css */
+
+/*--------------------------------------------------------------
+# Timeline Section
+--------------------------------------------------------------*/
+.timeline-section {
+    padding: 60px 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background for visibility */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-title {
+    text-align: center; /* Center align title */
+    font-size: 36px; /* Font size for heading */
+    margin-bottom: 30px; /* Space below title */
+    color: darkblue;
+}
+
+.timeline-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align buttons */
+    margin-bottom: 40px; /* Space below links */
+}
+
+.timeline-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside button */
+    margin-right: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.timeline-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.timeline-button.active {
+    background-color: #0056b3; /* Active button color */
+}
+
+.timeline-content {
+    display: flex; /* Use flexbox for content layout */
+    justify-content: space-between; /* Space between image and text */
+}
+
+.timeline-image img {
+    max-width: 100%; /* Ensure image is responsive */
+    border-radius: 8px; /* Rounded corners for image */
+}
+
+.timeline-text h3 {
+    font-size: 24px; /* Font size for subheading */
+    padding-left: 5%;
+}
+
+.timeline-text p {
+    font-size: 16px; /* Font size for paragraph text */
+    padding-left: 5%;
+}

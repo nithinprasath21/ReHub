@@ -90,6 +90,46 @@
 }
 
 /*--------------------------------------------------------------
+# Statistics Section
+--------------------------------------------------------------*/
+.statistics-section {
+    background-color: darkblue; /* Dark blue background */
+    padding: 2% 1%; /* Padding around the section */
+    padding-top: 0%;
+    margin-top: 3%;
+}
+
+.statistics-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center align items vertically */
+}
+
+.statistic-item {
+    color: white; /* Text color for items */
+    text-align: center; /* Center align text */
+}
+
+.statistic-item h3 {
+    font-size: 36px; /* Font size for numbers */
+    margin-bottom: 5px; /* Space below number */
+}
+
+.statistic-item p {
+    font-size: 18px; /* Font size for labels */
+}
+@media (max-width: 640px) {
+    .statistics-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align items horizontally */
+    }
+ 
+    .statistic-item {
+        flex-basis: 100%; /* Full width on smaller screens */
+        margin-bottom: 15px; /* Space below each item on small screens */
+    }
+ }
+/*--------------------------------------------------------------
 # Project Intake Section
 --------------------------------------------------------------*/
 .project-intake-section {
@@ -217,5 +257,99 @@
 
    .card {
        width: 80%; /* Full width on smaller screens */
+   }
+}
+
+/*--------------------------------------------------------------
+# Who Can Apply Section
+--------------------------------------------------------------*/
+.who-can-apply-section {
+    padding: 40px 20px; /* Padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.who-can-apply-title {
+    text-align: center; /* Center align title */
+    color: darkblue;
+    font-size: 36px; /* Font size for heading */
+    margin-bottom: 3%; /* Space below title */
+}
+
+.who-can-apply-subtitle {
+    text-align: left; /* Left align subtitle */
+    font-size: 24px; /* Font size for subtitle */
+    margin-bottom: 15px; /* Space below subtitle */
+    padding-left: 5%;
+}
+
+.who-can-apply-list {
+    list-style-type: disc; /* Use bullet points for list */
+    padding-left: 10%; /* Indent list items */
+}
+
+.who-can-apply-list li {
+    font-size: 18px; /* Font size for list items */
+    margin-bottom: 10px; /* Space between list items */
+}
+/*--------------------------------------------------------------
+# Themes Section
+--------------------------------------------------------------*/
+.themes-section {
+    padding: 60px 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background for the themes section */
+}
+
+.themes-title {
+    text-align: center; /* Center align title */
+    font-size: 36px; /* Font size for heading */
+    margin-bottom: 20px; /* Space below title */
+    color: darkblue;
+}
+
+.themes-description {
+    text-align: center; /* Center align description */
+    margin-bottom: 40px; /* Space below description */
+    font-size: 18px; /* Font size for description */
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: space-around; /* Space between cards */
+}
+
+/* Individual Card Styles */
+.theme-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px; /* Inner padding */
+    width: calc(40% - 20px); /* Width of each card (adjust as needed) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space below each card */
+    transition: transform .2s ease-in-out; /* Transition effect on hover */
+}
+
+.theme-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.theme-card h3 {
+    font-size: 24px; /* Font size for card title */
+    margin-bottom: 10px; /* Space below title */
+    color: darkblue;
+}
+
+.theme-card p {
+    font-size: 16px; /* Font size for card content */
+}
+
+/* Responsive styles (optional) */
+@media (max-width: 640px) {
+   .theme-card {
+       width: calc(100% - 20px); /* Full width on smaller screens */
    }
 }

@@ -16,7 +16,6 @@ function Navbar() {
                 <ul>
                         <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink></li>
                         <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>About Us</NavLink></li>
-                        <li><NavLink to="/theme" className={({ isActive }) => (isActive ? 'active' : '')}>Themes</NavLink></li>
                         <li><NavLink to="/add-project" className={({ isActive }) => (isActive ? 'active' : '')}>Apply Now</NavLink></li>
                         <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>Contact Us</NavLink></li>
                     </ul>
